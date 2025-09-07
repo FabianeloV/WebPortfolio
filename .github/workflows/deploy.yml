@@ -39,7 +39,5 @@ jobs:
         #run: ./gradlew wasmJsBrowserProductionWebpack
     
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./wasmJs/productionExecutable
+        id: deployment
+        uses: actions/deploy-pages@v4
